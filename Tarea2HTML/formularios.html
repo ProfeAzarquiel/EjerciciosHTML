@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica con Formularios</title>
+</head>
+<body>
+    <form method="post" action="#">
+        <fieldset style="width: 800px; border: 1px solid #000;background-color: rgb(160, 252, 137);">
+            <legend style="border: 1px solid #000; background-color: white;"><b>Datos Personales</b></legend>
+        <p>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" required placeholder="Insertar nombre"/>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required placeholder="Insertar apellidos"/>
+            <label for="email">Email:</label>
+            <input type="email" name="email" required placeholder="Correo electrónico"/>
+        </p>
+        <p>
+            <label for="telefono">Telefono:</label>
+            <input type="number" name="telefono" id="" required placeholder="Nº de contacto">
+            <label for="dni">DNI:</label>
+            <input type="text" name="dni" id="" required placeholder="Nº de documento">
+            <label for="nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" name="nacimiento" id="" required>
+        </p>
+        <p>
+        <label for="provincia">Provincia</label>
+        <select name="provincia" required>
+            <option value="">-- Selecciona --</option>
+            <option value="toledo">Toledo</option>
+            <option value="ciudadreal">Ciudad Real</option>
+            <option value="albacete">Albacete</option>
+            <option value="cuenca">Cuenca</option>
+            <option value="guadalajara">Guadalajara</option>
+        </select>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        <label for="genero">Sexo: </label>
+        <input type="radio" name="genero" value="masculino" required>Hombre
+        <input type="radio" name="genero" value="femenino" required>Mujer
+        </p>
+
+        <p>
+            <label for="dispositivos" >Dispositivos Preferido:</label>
+            <input type="checkbox" name="dispositivos" value="pc" />PC
+            <input type="checkbox" name="dispositivos" value="table" />Tableta
+            <input type="checkbox" name="dispositivos" value="movil" />Móvil
+
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+            <label for="editor" >IDE Preferido:</label>
+            <input list="editor">
+            <datalist id="editor">
+                <option value="Atom">
+                <option value="NotePad++">
+                <option value="VsCode">
+                <option value="Sublime">
+                <option value="Brackets">
+            </datalist>
+        </p>
+
+        </fieldset>
+        <br>
+        <fieldset style="width: 800px; border: 1px solid #000; background-color: lightblue;">
+            <legend style="border: 1px solid #000; background-color: white;"><b>Otros datos de interés</b></legend>
+            <p>
+                <textarea name="" id="" cols="40" rows="10" required style="resize: none; width: 750px;" placeholder="Indica cualquier otra información que consideres relevante"></textarea>
+            </p>
+        </fieldset>
+        <br>
+        <fieldset style="width: 800px; border: 1px solid #000; background-color: rgb(186, 116, 243);">
+            <legend style="border: 1px solid #000; background-color: white;"><b>Competencias de Programación:</b></legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="rango1">Nivel de Java:</label>
+                            <input type="range" name="rango1" min="0" max="100" value="0">
+                        </td>
+                        <td style="width: 100px;"> </td>
+                        <td>
+                            <label for="rango2">Nivel de Python:</label>
+                            <input type="range" name="rango2" min="0" max="100" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="rango3">Nivel de HTML:</label>
+                            <input type="range" name="rango3" min="0" max="100" value="0">
+                        </td>
+                        <td style="width: 100px;"> </td>
+                        <td>
+                            <label for="rango4">Nivel de CSS:</label>
+                            <input type="range" name="rango4" min="0" max="100" value="0">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        
+        <p>
+            <button type="button">Activado</button>
+            <button type="reset">Borrar Datos</button>
+            <button type="submit">Enviar Solicitud</button>
+            <button disabled="disabled">Desactivado</button>
+        </p>
+    </form>
+
+</body>
+</html>
